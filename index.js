@@ -42,6 +42,16 @@ function createItem(item) {
 		items = getTasksFromDOM();
 		saveTasks(items);
 	})
+
+	editButton.addEventListener( "click", () => {
+		textElement.contentEditable = true;
+		textElement.focus() = focus;
+	})
+
+	textElement.addEventListener( "blur", () => {
+		textElement.contentEditable = false;
+		saveTasks(getTasksFromDOM());
+	})
   return clone;
 }
 
